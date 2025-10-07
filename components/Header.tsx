@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { User, Wallet, Shop } from "../constant/icon";
+import { User, Shop, Heart, Compare } from "../constant/icon";
 
 export default function Header() {
   return (
@@ -10,12 +10,13 @@ export default function Header() {
           <User color={"#000000"} />
           <View className="flex-col mt-[-2px]">
             <Text className="text-[18px] font-nunitosans-extrabold text-black">
-              Hey, Dipankar
+              Hey, Ankit
             </Text>
           </View>
         </View>
-        <View className="flex-row gap-10">
-          <Wallet color={"#000000"} />
+        <View className="flex-row gap-7">
+          <Compare color="#000000" />
+          <Heart color={"#000000"} />
           <Shop color={"#000000"} />
         </View>
       </View>
