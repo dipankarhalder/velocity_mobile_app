@@ -25,7 +25,7 @@ export default function Home() {
 
   const headerHeight = scrollY.interpolate({
     inputRange: [0, 356],
-    outputRange: [530, 172],
+    outputRange: [500, 172],
     extrapolate: "clamp",
   });
 
@@ -37,7 +37,7 @@ export default function Home() {
 
   const bgColorChange = scrollY.interpolate({
     inputRange: [0, 300],
-    outputRange: ["#000000", "#ff8d08"],
+    outputRange: ["#000000", "#f8944f"],
     extrapolate: "clamp",
   });
 
@@ -110,7 +110,7 @@ export default function Home() {
       </Animated.View>
       <Animated.ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingTop: 556, paddingBottom: 0 }}
+        contentContainerStyle={{ paddingTop: 540, paddingBottom: 0 }}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { y: scrollY } } }],
           { useNativeDriver: false }

@@ -7,14 +7,6 @@ import authBg from "../assets/images/signin.jpg";
 
 import heart from "../assets/images/heart.png";
 import mainbg from "../assets/images/mainbg.jpg";
-import special from "../assets/images/special.png";
-import birayani from "../assets/images/birayani.png";
-import tandoor from "../assets/images/tandoor.png";
-import qorma from "../assets/images/qorma.png";
-import chicken from "../assets/images/chicken.png";
-import kebab from "../assets/images/kebab.png";
-import mutton from "../assets/images/mutton.png";
-import fried from "../assets/images/fried.png";
 
 import foodItemImage1 from "../assets/images/m1.jpg";
 import foodItemImage2 from "../assets/images/m2.jpg";
@@ -34,7 +26,20 @@ import splashImage8 from "../assets/images/8.jpg";
 import splashImage9 from "../assets/images/9.jpg";
 import splashImage10 from "../assets/images/10.jpg";
 import splashImage11 from "../assets/images/11.jpg";
-import { Home, User, Appoint } from "./icon";
+import {
+  Home,
+  User,
+  Appoint,
+  Processor,
+  Motherboard,
+  Memory,
+  Monitor,
+  Storage,
+  Keyboard,
+  Cabinate,
+  Headphone,
+  Console,
+} from "./icon";
 
 export const main_splash_screen_logo = mainAppLogo;
 export const splash_screen_background = splashScreenBackground;
@@ -91,14 +96,15 @@ export const tabs_information = [
 ];
 
 export const foodCategories = [
-  { id: 1, title: "Special", imgUrl: special },
-  { id: 2, title: "Biryani", imgUrl: birayani },
-  { id: 5, title: "Qorma", imgUrl: qorma },
-  { id: 6, title: "Chicken", imgUrl: chicken },
-  { id: 7, title: "Mutton", imgUrl: mutton },
-  { id: 4, title: "Kabab", imgUrl: kebab },
-  { id: 3, title: "Tandoor", imgUrl: tandoor },
-  { id: 8, title: "Fried", imgUrl: fried },
+  { id: 1, title: "Processor", offer: "30%", Icons: Processor },
+  { id: 2, title: "Motherboard", offer: "32%", Icons: Motherboard },
+  { id: 3, title: "Memory", offer: "23%", Icons: Memory },
+  { id: 4, title: "Monitor", offer: "45%", Icons: Monitor },
+  { id: 5, title: "Storage", offer: "31%", Icons: Storage },
+  { id: 6, title: "Keyboard", offer: "16%", Icons: Keyboard },
+  { id: 7, title: "Cabinate", offer: "22%", Icons: Cabinate },
+  { id: 8, title: "Headphone", offer: "28%", Icons: Headphone },
+  { id: 9, title: "Console", offer: "38%", Icons: Console },
 ];
 
 export const offerList = [

@@ -8,9 +8,10 @@ import {
 } from "react-native";
 
 const comboBanners = [
-  require("../assets/images/combo1.jpeg"),
-  require("../assets/images/combo2.jpg"),
-  require("../assets/images/combo3.jpg"),
+  require("../assets/images/cat_advt_1.jpg"),
+  require("../assets/images/cat_advt_2.jpg"),
+  require("../assets/images/cat_advt_3.jpg"),
+  require("../assets/images/cat_advt_4.jpg"),
 ];
 const { width: screenWidth } = Dimensions.get("window");
 
@@ -55,7 +56,7 @@ export default function SpclComboPack() {
               resizeMode="cover"
               style={{
                 width: screenWidth,
-                height: 340,
+                height: 180,
                 justifyContent: "center",
               }}
             />
@@ -72,7 +73,7 @@ export default function SpclComboPack() {
         {comboBanners.map((_, i) => (
           <View
             key={i}
-            className={`w-2 h-2 mx-1 rounded-full ${i === currentIndex ? "bg-[#ff8d08]" : "bg-gray-300"}`}
+            className={`w-2 h-2 mx-1 rounded-full ${i === currentIndex ? "bg-[#ff0000]" : "bg-gray-300"}`}
           />
         ))}
       </View>
