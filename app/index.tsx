@@ -21,16 +21,16 @@ export default function Index() {
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => {
-      router.replace(pathItem.splash as any);
+      router.replace(pathItem.login as any);
     }, 3000);
   }, [router]);
 
   return (
-    <View className="flex-1 bg-black">
+    <View className="flex-1 bg-white">
       {/* Onboarding slides */}
       <ScrollView
         pagingEnabled
-        className="flex-1"
+        className="flex-1 pt-[70px]"
         scrollEventThrottle={16}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{ height: screenHeight }}
@@ -44,7 +44,7 @@ export default function Index() {
       </ScrollView>
 
       {/* Logo */}
-      <View className="absolute top-[100px] w-full flex-row justify-center space-x-2">
+      <View className="absolute top-[18px] w-full flex-row justify-center space-x-2">
         <Image
           source={main_splash_screen_logo}
           style={{ width: 220, height: 220 }}
@@ -53,9 +53,9 @@ export default function Index() {
       </View>
 
       {/* Bottom text */}
-      <View className="absolute bottom-[70px] w-full flex-row justify-center space-x-2">
+      <View className="absolute bottom-[60px] w-full flex-row justify-center space-x-2">
         <Text className="text-white text-xl font-nunitosans-semibold">
-          Please take a breath...
+          Please wait...
         </Text>
       </View>
     </View>

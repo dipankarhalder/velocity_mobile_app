@@ -7,16 +7,16 @@ export default function Header() {
     <View className="w-full flex-col mb-4 pt-3 px-5">
       <View className="flex-row w-full justify-between">
         <View className="flex-row gap-3">
-          <User color={"#ffffff"} />
+          <User color={"#000000"} />
           <View className="flex-col mt-[-2px]">
-            <Text className="text-[18px] font-nunitosans-extrabold text-white">
+            <Text className="text-[18px] font-nunitosans-extrabold text-black">
               Hey, Dipankar
             </Text>
           </View>
         </View>
         <View className="flex-row gap-10">
-          <Wallet color={"#ffffff"} />
-          <Shop color={"#ffffff"} />
+          <Wallet color={"#000000"} />
+          <Shop color={"#000000"} />
         </View>
       </View>
     </View>

@@ -1,12 +1,12 @@
-import mainAppLogo from "../assets/images/mainlogo.png";
-import splashScreenBackground from "../assets/images/splashbg.png";
+import mainAppLogo from "../assets/images/logo.png";
+import splashScreenBackground from "../assets/images/splash-bg.jpg";
 import comboPackBanner1 from "../assets/images/combo1.jpeg";
 import comboPackBanner2 from "../assets/images/combo2.jpg";
 import comboPackBanner3 from "../assets/images/combo3.jpg";
+import authBg from "../assets/images/signin.jpg";
 
 import heart from "../assets/images/heart.png";
-
-import banner1 from "../assets/images/banner1.jpg";
+import mainbg from "../assets/images/mainbg.jpg";
 import special from "../assets/images/special.png";
 import birayani from "../assets/images/birayani.png";
 import tandoor from "../assets/images/tandoor.png";
@@ -38,8 +38,9 @@ import { Home, User, Appoint } from "./icon";
 
 export const main_splash_screen_logo = mainAppLogo;
 export const splash_screen_background = splashScreenBackground;
-export const mainBanner = banner1;
+export const mainBanner = mainbg;
 export const footer_heart = heart;
+export const auth_bg = authBg;
 
 export const splash_banner_image_data = {
   splash_image_1: splashImage1,
