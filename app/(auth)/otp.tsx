@@ -16,7 +16,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 import { pathItem } from "../../constant/routes";
-import { splash_banner_image_data } from "../../constant/static";
+import { auth_bg } from "../../constant/static";
 import { useAuthStore } from "../../store/auth";
 
 const schema = yup.object().shape({
@@ -112,9 +112,9 @@ export default function Otp() {
         <View className="flex-1 bg-black">
           {/* Banner Section */}
           <ImageBackground
-            source={splash_banner_image_data.splash_image_4}
+            source={auth_bg}
             resizeMode="cover"
-            className="absolute top-0 left-0 right-0 h-[52%] flex items-start justify-center px-8"
+            className="absolute top-0 left-0 right-0 h-[54%] flex items-start justify-center px-8"
           >
             <LinearGradient
               colors={["transparent", "#000000"]}
@@ -130,22 +130,22 @@ export default function Otp() {
               }}
             />
             <View className="relative z-[2]">
-              <Text className="text-white text-2xl mb-3 font-nunitosans-semibold">
+              <Text className="text-white text-4xl mb-1 font-nunitosans-bold">
                 Input 4 digits
               </Text>
-              <Text className="text-white text-4xl font-nunitosans-bold">
+              <Text className="text-white text-2xl font-nunitosans-semibold">
                 OTP Validation
               </Text>
             </View>
           </ImageBackground>
 
           {/* Form Container */}
-          <View className="absolute bottom-0 left-0 right-0 px-8 pt-6 bg-white h-[66%] rounded-[36px] z-[3]">
+          <View className="absolute bottom-0 left-0 right-0 px-8 pt-6 bg-white h-[60%] rounded-[36px] z-[3]">
             <View className="flex-1 items-center justify-start bg-white">
               <Text className="text-gray-700 text-[18px] mt-2 mb-1 font-nunitosans-bold w-full leading-tight">
                 Sent a 4-digit code
               </Text>
-              <Text className="text-[#ff8d08] w-full text-[13px] mt-1 mb-10 font-nunitosans-medium leading-tight">
+              <Text className="text-[#FF0000] w-full text-[13px] mt-1 mb-10 font-nunitosans-medium leading-tight">
                 Please enter the OTP sent to{" "}
                 {phone ? `+91-${phone}` : "your number"}.
               </Text>
@@ -197,7 +197,7 @@ export default function Otp() {
                       console.log("OTP resent to", phone);
                     }}
                   >
-                    <Text className="text-[#ff8d08] font-nunitosans-bold underline text-sm">
+                    <Text className="text-[#FF0000] font-nunitosans-bold underline text-sm">
                       Resend Code
                     </Text>
                   </TouchableOpacity>
@@ -210,10 +210,10 @@ export default function Otp() {
                   onPress={handleSubmit(onSubmit)}
                   disabled={loading}
                   className={`py-[12px] rounded-lg items-center ${
-                    loading ? "bg-gray-300" : "bg-[#ff8d08]"
+                    loading ? "bg-gray-300" : "bg-[#FF0000]"
                   }`}
                   style={{
-                    shadowColor: !loading ? "#ff8d08" : "#cccccc",
+                    shadowColor: !loading ? "#FF0000" : "#cccccc",
                     shadowOffset: { width: 0, height: 8 },
                     shadowOpacity: 0.4,
                     shadowRadius: 4.65,
