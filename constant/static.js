@@ -10,6 +10,7 @@ import mainbg from "../assets/images/mainbg.jpg";
 import mainback from "../assets/images/mainback.jpg";
 import mainbackg from "../assets/images/mainbackg.jpg";
 import banbg from "../assets/images/ban.jpg";
+import profile from "../assets/images/profile.png";
 
 import foodItemImage1 from "../assets/images/p1.jpg";
 import foodItemImage2 from "../assets/images/p2.jpg";
@@ -62,6 +63,7 @@ import {
   Home,
   User,
   Lists,
+  Orders,
   Categories,
   Processor,
   Motherboard,
@@ -82,6 +84,7 @@ export const auth_bg = authBg;
 export const ban_bg = banbg;
 export const main_back = mainback;
 export const main_backg = mainbackg;
+export const user_profile = profile;
 
 export const splash_banner_image_data = {
   splash_image_1: splashImage1,
@@ -128,7 +131,7 @@ export const tabs_information = [
   { name: "home", title: "Home", Icon: Home },
   { name: "bookatable", title: "Products", Icon: Lists },
   { name: "categories", title: "Categories", Icon: Categories },
-  { name: "orders", title: "Orders", Icon: User },
+  { name: "orders", title: "Orders", Icon: Orders },
   { name: "profile", title: "Profile", Icon: User },
 ];
 
