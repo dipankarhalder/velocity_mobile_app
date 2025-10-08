@@ -7,6 +7,8 @@ import authBg from "../assets/images/signin.jpg";
 
 import heart from "../assets/images/heart.png";
 import mainbg from "../assets/images/mainbg.jpg";
+import mainback from "../assets/images/mainback.jpg";
+import mainbackg from "../assets/images/mainbackg.jpg";
 import banbg from "../assets/images/ban.jpg";
 
 import foodItemImage1 from "../assets/images/p1.jpg";
@@ -78,6 +80,8 @@ export const mainBanner = mainbg;
 export const footer_heart = heart;
 export const auth_bg = authBg;
 export const ban_bg = banbg;
+export const main_back = mainback;
+export const main_backg = mainbackg;
 
 export const splash_banner_image_data = {
   splash_image_1: splashImage1,
