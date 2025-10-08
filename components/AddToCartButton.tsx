@@ -34,28 +34,28 @@ export default function AddToCartButton({
   };
 
   return (
-    <View className="absolute bottom-[-14px] w-[90px] left-[20px]">
+    <View className="w-auto">
       {count === 0 ? (
         <Pressable
-          className="bg-orange-100 px-4 rounded-md border border-[#ff8d08]"
+          className="bg-red-100 px-4 rounded-md border border-[#ff0000]"
           onPress={handleAddToCart}
         >
-          <Text className="text-[#ff8d08] leading-[32px] h-[32px] text-center font-nunitosans-bold uppercase">
-            Add
+          <Text className="text-[#ff0000] leading-[30px] h-[30px] text-center text-[12px] font-nunitosans-bold">
+            Add to Cart
           </Text>
         </Pressable>
       ) : (
-        <View className="flex-row items-center justify-between space-x-4 bg-[#ff8d08] rounded-md">
+        <View className="flex-row items-center justify-between space-x-4 bg-[#ff0000] rounded-md">
           <Pressable onPress={handleDecrement}>
-            <Text className="text-xl h-[34px] w-[34px] text-white font-nunitosans-bold text-center leading-[32px]">
+            <Text className="text-xl h-[32px] w-[30px] text-white font-nunitosans-bold text-center leading-[30px]">
               -
             </Text>
           </Pressable>
-          <Text className="text-base font-nunitosans-bold text-white">
+          <Text className="text-base font-nunitosans-bold text-white px-2">
             {count}
           </Text>
           <Pressable onPress={handleIncrement}>
-            <Text className="text-xl h-[34px] w-[34px] text-white font-nunitosans-bold text-center leading-[32px]">
+            <Text className="text-xl h-[32px] w-[30px] text-white font-nunitosans-bold text-center leading-[30px]">
               +
             </Text>
           </Pressable>

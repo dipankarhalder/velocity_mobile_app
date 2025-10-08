@@ -7,6 +7,7 @@ import authBg from "../assets/images/signin.jpg";
 
 import heart from "../assets/images/heart.png";
 import mainbg from "../assets/images/mainbg.jpg";
+import banbg from "../assets/images/ban.jpg";
 
 import foodItemImage1 from "../assets/images/p1.jpg";
 import foodItemImage2 from "../assets/images/p2.jpg";
@@ -67,6 +68,7 @@ export const splash_screen_background = splashScreenBackground;
 export const mainBanner = mainbg;
 export const footer_heart = heart;
 export const auth_bg = authBg;
+export const ban_bg = banbg;
 
 export const splash_banner_image_data = {
   splash_image_1: splashImage1,
@@ -333,5 +335,128 @@ export const productListNew = [
     title: "Monitor",
     imgUrl: foodItemImage8,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+];
+
+export const listOfProducts = [
+  {
+    id: 1,
+    title: "AMD Ryzen 7 5800X Processor",
+    imgUrl: foodItemImage1,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "39,984",
+    mainPrice: "43,400",
+  },
+  {
+    id: 2,
+    title: "Crucial P3 Plus 1TB NVMe Gen4 Internal S...",
+    imgUrl: foodItemImage2,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "13,820",
+    mainPrice: "16,245",
+  },
+  {
+    id: 3,
+    title: "ASUS Dual RTX 5060 OC 8GB GDDR7 Graphics...",
+    imgUrl: foodItemImage3,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "63,375",
+    mainPrice: "71,200",
+  },
+  {
+    id: 4,
+    title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
+    imgUrl: foodItemImage4,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "1,13,302",
+    mainPrice: "1,45,560",
+  },
+  {
+    id: 5,
+    title: "CyberPower UT2200E 2200VA UPS",
+    imgUrl: foodItemImage5,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "40,309",
+    mainPrice: "46,734",
+  },
+  {
+    id: 6,
+    title: "ZOTAC RTX 5060 Solo 8GB GDDR7 Graphics C...",
+    imgUrl: foodItemImage6,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "27,330",
+    mainPrice: "32,240",
+  },
+  {
+    id: 7,
+    title: "MSI RTX 5060 Inspire 2X OC 8GB GDDR7 Gra...",
+    imgUrl: foodItemImage7,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "33,302",
+    mainPrice: "45,560",
+  },
+  {
+    id: 8,
+    title: "ASUS Dual RTX IPS Monitor for Graphics...",
+    imgUrl: foodItemImage8,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "26,309",
+    mainPrice: "32,734",
+  },
+  {
+    id: 9,
+    title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
+    imgUrl: foodItemImage9,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "16,330",
+    mainPrice: "19,240",
+  },
+  {
+    id: 10,
+    title: "AMD Ryzen 7 5800X Processor",
+    imgUrl: foodItemImage1,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "39,984",
+    mainPrice: "43,400",
+  },
+  {
+    id: 11,
+    title: "Crucial P3 Plus 1TB NVMe Gen4 Internal S...",
+    imgUrl: foodItemImage2,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "13,820",
+    mainPrice: "16,245",
+  },
+  {
+    id: 12,
+    title: "ASUS Dual RTX 5060 OC 8GB GDDR7 Graphics...",
+    imgUrl: foodItemImage3,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "63,375",
+    mainPrice: "71,200",
+  },
+  {
+    id: 13,
+    title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
+    imgUrl: foodItemImage4,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "1,13,302",
+    mainPrice: "1,45,560",
+  },
+  {
+    id: 14,
+    title: "CyberPower UT2200E 2200VA UPS",
+    imgUrl: foodItemImage5,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "40,309",
+    mainPrice: "46,734",
+  },
+  {
+    id: 15,
+    title: "ZOTAC RTX 5060 Solo 8GB GDDR7 Graphics C...",
+    imgUrl: foodItemImage6,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "27,330",
+    mainPrice: "32,240",
   },
 ];
