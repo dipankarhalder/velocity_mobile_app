@@ -20,6 +20,7 @@ import SpclComboPack from "../../components/SpclComboPack";
 import NextCombo from "../../components/NextCombo";
 import OfferList from "../../components/OfferList";
 import FeatureProducts from "../../components/FeatureProducts";
+import MainFeatureList from "../../components/MainFeatureList";
 
 export default function Home() {
   const [searchInput, setSearchInput] = useState("");
@@ -140,6 +141,7 @@ export default function Home() {
           <RecommendedPhone />
           <FeatureProducts />
           <NextCombo />
+          <MainFeatureList />
           <OfferList />
         </View>
         <View className="flex-col w-full bg-gray-100 px-5 pt-[30px] pb-[50px]">
