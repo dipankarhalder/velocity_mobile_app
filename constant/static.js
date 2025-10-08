@@ -8,12 +8,15 @@ import authBg from "../assets/images/signin.jpg";
 import heart from "../assets/images/heart.png";
 import mainbg from "../assets/images/mainbg.jpg";
 
-import foodItemImage1 from "../assets/images/m1.jpg";
-import foodItemImage2 from "../assets/images/m2.jpg";
-import foodItemImage3 from "../assets/images/m3.jpg";
-import foodItemImage4 from "../assets/images/m4.jpg";
-import foodItemImage5 from "../assets/images/m5.jpg";
-import foodItemImage6 from "../assets/images/m6.jpg";
+import foodItemImage1 from "../assets/images/p1.jpg";
+import foodItemImage2 from "../assets/images/p2.jpg";
+import foodItemImage3 from "../assets/images/p3.jpg";
+import foodItemImage4 from "../assets/images/p4.jpg";
+import foodItemImage5 from "../assets/images/p5.jpg";
+import foodItemImage6 from "../assets/images/p6.jpg";
+import foodItemImage7 from "../assets/images/p7.jpg";
+import foodItemImage8 from "../assets/images/p8.jpg";
+import foodItemImage9 from "../assets/images/p9.jpg";
 
 import splashImage1 from "../assets/images/1.jpg";
 import splashImage2 from "../assets/images/2.jpg";
@@ -149,57 +152,75 @@ export const offerList = [
 export const productList = [
   {
     id: 1,
-    title: "Fish Birayani",
+    title: "AMD Ryzen 7 5800X Processor",
     imgUrl: foodItemImage1,
     desc: "Lorem Ipsum has been the industrys standard..",
-    rating: 4.2,
-    rateUser: 124,
-    price: "300",
+    price: "39,984",
+    mainPrice: "43,400",
   },
   {
     id: 2,
-    title: "Chicken Kebab Birayani",
+    title: "Crucial P3 Plus 1TB NVMe Gen4 Internal S...",
     imgUrl: foodItemImage2,
     desc: "Lorem Ipsum has been the industrys standard..",
-    rating: 2.6,
-    rateUser: 24,
-    price: "320",
+    price: "13,820",
+    mainPrice: "16,245",
   },
   {
     id: 3,
-    title: "Special Chilli Chicken Birayani",
+    title: "ASUS Dual RTX 5060 OC 8GB GDDR7 Graphics...",
     imgUrl: foodItemImage3,
     desc: "Lorem Ipsum has been the industrys standard..",
-    rating: 3.8,
-    rateUser: 150,
-    price: "430",
+    price: "63,375",
+    mainPrice: "71,200",
   },
   {
     id: 4,
-    title: "Chicken Dum Birayani",
+    title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
     imgUrl: foodItemImage4,
     desc: "Lorem Ipsum has been the industrys standard..",
-    rating: 2.9,
-    rateUser: 36,
-    price: "330",
+    price: "1,13,302",
+    mainPrice: "1,45,560",
   },
   {
     id: 5,
-    title: "Veg Birayani",
+    title: "CyberPower UT2200E 2200VA UPS",
     imgUrl: foodItemImage5,
     desc: "Lorem Ipsum has been the industrys standard..",
-    rating: 3.8,
-    rateUser: 150,
-    price: "430",
+    price: "40,309",
+    mainPrice: "46,734",
   },
   {
     id: 6,
-    title: "Royal Special Chicken Birayani",
+    title: "ZOTAC RTX 5060 Solo 8GB GDDR7 Graphics C...",
     imgUrl: foodItemImage6,
     desc: "Lorem Ipsum has been the industrys standard..",
-    rating: 4.9,
-    rateUser: 36,
-    price: "330",
+    price: "27,330",
+    mainPrice: "32,240",
+  },
+  {
+    id: 7,
+    title: "MSI RTX 5060 Inspire 2X OC 8GB GDDR7 Gra...",
+    imgUrl: foodItemImage7,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "33,302",
+    mainPrice: "45,560",
+  },
+  {
+    id: 8,
+    title: "ASUS Dual RTX IPS Monitor for Graphics...",
+    imgUrl: foodItemImage8,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "26,309",
+    mainPrice: "32,734",
+  },
+  {
+    id: 9,
+    title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
+    imgUrl: foodItemImage9,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "16,330",
+    mainPrice: "19,240",
   },
 ];
 
