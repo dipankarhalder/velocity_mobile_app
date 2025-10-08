@@ -168,7 +168,7 @@ export default function Login() {
               </View>
 
               {/* Sign Up Link */}
-              <View className="absolute bottom-[54px] w-full flex-row justify-center">
+              {/* <View className="absolute bottom-[54px] w-full flex-row justify-center">
                 <Text className="text-gray-500 text-md font-nunitosans-semibold">
                   Don&apos;t have an account?{" "}
                 </Text>
@@ -179,7 +179,7 @@ export default function Login() {
                     Create an account
                   </Text>
                 </TouchableOpacity>
-              </View>
+              </View> */}
             </View>
           </View>
         </View>
