@@ -19,6 +19,14 @@ import foodItemImage7 from "../assets/images/p7.jpg";
 import foodItemImage8 from "../assets/images/p8.jpg";
 import foodItemImage9 from "../assets/images/p9.jpg";
 
+import bgp1 from "../assets/images/bgp1.jpg";
+import bgp2 from "../assets/images/bgp2.jpg";
+import bgp3 from "../assets/images/bgp3.jpg";
+import bgp4 from "../assets/images/bgp4.jpg";
+import bgp5 from "../assets/images/bgp5.jpg";
+import bgp6 from "../assets/images/bgp6.jpg";
+import bgp7 from "../assets/images/bgp7.jpg";
+
 import cl1 from "../assets/images/cl1.jpg";
 import cl2 from "../assets/images/cl2.jpg";
 import cl3 from "../assets/images/cl3.jpg";
@@ -51,7 +59,8 @@ import splashImage11 from "../assets/images/11.jpg";
 import {
   Home,
   User,
-  Appoint,
+  Lists,
+  Categories,
   Processor,
   Motherboard,
   Memory,
@@ -113,9 +122,10 @@ export const special_banner = {
 
 export const tabs_information = [
   { name: "home", title: "Home", Icon: Home },
-  { name: "bookatable", title: "Book a table", Icon: Appoint },
-  { name: "orders", title: "My Orders", Icon: User },
-  { name: "profile", title: "My Profile", Icon: User },
+  { name: "bookatable", title: "Products", Icon: Lists },
+  { name: "categories", title: "Categories", Icon: Categories },
+  { name: "orders", title: "Orders", Icon: User },
+  { name: "profile", title: "Profile", Icon: User },
 ];
 
 export const foodCategories = [
@@ -334,6 +344,53 @@ export const productListNew = [
     id: 7,
     title: "Monitor",
     imgUrl: foodItemImage8,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+];
+
+export const productListCat = [
+  {
+    id: 1,
+    title: "Processor",
+    imgUrl: bgp1,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+  {
+    id: 5,
+    title: "Motherboard",
+    imgUrl: bgp4,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+  {
+    id: 2,
+    title: "RAM / SSD",
+    imgUrl: bgp3,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+
+  {
+    id: 4,
+    title: "Graphics Card",
+    imgUrl: bgp5,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+
+  {
+    id: 6,
+    title: "Cabinate",
+    imgUrl: bgp6,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+  {
+    id: 7,
+    title: "UPS / Power",
+    imgUrl: bgp7,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+  {
+    id: 3,
+    title: "Phone",
+    imgUrl: bgp2,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
 ];
