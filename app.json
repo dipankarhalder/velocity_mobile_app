@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "Mahamaya Hotel & Restaurent",
-    "slug": "mahamaya",
+    "name": "Valocity",
+    "slug": "valocity",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "mahamaya",
+    "scheme": "valocity",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.crzydipankar.mahamaya",
+      "bundleIdentifier": "com.crzydipankar.valocity",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -21,7 +21,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.crzydipankar.mahamaya"
+      "package": "com.crzydipankar.valocity"
     },
     "web": {
       "bundler": "metro",
