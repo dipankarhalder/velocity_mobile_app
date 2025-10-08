@@ -182,6 +182,12 @@ export default function Otp() {
                 ) : null}
               </View>
 
+              <View className="mb-4">
+                <Text className="text-gray-800 text-sm font-nunitosans-bold">
+                  Demo OTP: 1234
+                </Text>
+              </View>
+
               {/* Resend OTP Section */}
               <View className="flex-row justify-center items-center mb-8">
                 {timer > 0 ? (
