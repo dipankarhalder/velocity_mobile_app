@@ -135,8 +135,8 @@ export default function Home() {
           <FoodItemCategories />
           <Recommended />
           <SpclComboPack />
-          <OfferList />
           <FeatureProducts />
+          <OfferList />
         </View>
         <View className="flex-col w-full bg-gray-100 px-5 pt-[100px] pb-[120px]">
           <Text className="text-[40px] text-gray-400 font-nunitosans-extrabold leading-tight">

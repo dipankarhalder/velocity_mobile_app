@@ -36,10 +36,10 @@ export default function SpclComboPack() {
   }, [currentIndex]);
 
   return (
-    <View className="flex w-full mb-[20px]">
+    <View className="flex w-full mb-[40px]">
       <View className="w-full mb-3">
-        <Text className="text-[12px] uppercase text-gray-400 font-nunitosans-bold">
-          Special Combo Packages
+        <Text className="text-[16px] text-gray-600 font-nunitosans-bold">
+          Special Items
         </Text>
       </View>
       <View className="w-full rounded-[10px] overflow-hidden">
