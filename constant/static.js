@@ -18,6 +18,24 @@ import foodItemImage7 from "../assets/images/p7.jpg";
 import foodItemImage8 from "../assets/images/p8.jpg";
 import foodItemImage9 from "../assets/images/p9.jpg";
 
+import cl1 from "../assets/images/cl1.jpg";
+import cl2 from "../assets/images/cl2.jpg";
+import cl3 from "../assets/images/cl3.jpg";
+import cl4 from "../assets/images/cl4.jpg";
+import cl5 from "../assets/images/cl5.jpg";
+import cl6 from "../assets/images/cl6.jpg";
+import cl7 from "../assets/images/cl7.jpg";
+import cl8 from "../assets/images/cl8.jpg";
+import cl9 from "../assets/images/cl9.jpg";
+import cl10 from "../assets/images/cl10.jpg";
+
+import ph1 from "../assets/images/ph1.jpeg";
+import ph2 from "../assets/images/ph2.jpeg";
+import ph3 from "../assets/images/ph3.png";
+import ph4 from "../assets/images/ph4.png";
+import ph5 from "../assets/images/ph5.png";
+import ph6 from "../assets/images/ph6.jpeg";
+
 import splashImage1 from "../assets/images/1.jpg";
 import splashImage2 from "../assets/images/2.jpg";
 import splashImage3 from "../assets/images/3.jpg";
@@ -113,39 +131,43 @@ export const foodCategories = [
 export const offerList = [
   {
     id: 1,
-    title: "10%",
-    topColor: "#88c3cf",
-    bottomColor: "#3d71e8",
+    imgUrl: cl1,
   },
   {
     id: 2,
-    title: "25%",
-    topColor: "#b2a0e8",
-    bottomColor: "#50369e",
+    imgUrl: cl2,
   },
   {
     id: 3,
-    title: "32%",
-    topColor: "#deb876",
-    bottomColor: "#d67647",
+    imgUrl: cl3,
   },
   {
     id: 4,
-    title: "45%",
-    topColor: "#c63b63",
-    bottomColor: "#8f1136",
+    imgUrl: cl4,
   },
   {
     id: 5,
-    title: "56%",
-    topColor: "#93bf8d",
-    bottomColor: "#379b29",
+    imgUrl: cl5,
   },
   {
     id: 6,
-    title: "40%",
-    topColor: "#b2a0e8",
-    bottomColor: "#50369e",
+    imgUrl: cl6,
+  },
+  {
+    id: 7,
+    imgUrl: cl7,
+  },
+  {
+    id: 8,
+    imgUrl: cl8,
+  },
+  {
+    id: 9,
+    imgUrl: cl9,
+  },
+  {
+    id: 10,
+    imgUrl: cl10,
   },
 ];
 
@@ -224,137 +246,92 @@ export const productList = [
   },
 ];
 
-export const productListNew = [
+export const phoneList = [
   {
     id: 1,
-    title: "Fish Birayani",
-    imgUrl: foodItemImage1,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 4.2,
-    rateUser: 124,
-    price: "300",
-    type: "veg",
-    bestseller: true,
+    title: "Apple iPhone 16 Pro Max (Black Titanium, 256 GB)",
+    imgUrl: ph1,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "1,34,900",
   },
   {
     id: 2,
-    title: "Chicken Kebab Birayani",
-    imgUrl: foodItemImage2,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 2.6,
-    rateUser: 24,
-    price: "320",
-    type: "nonveg",
-    bestseller: false,
+    title: "Google Pixel 9A (Iris, 256 GB)",
+    imgUrl: ph2,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "44,820",
   },
   {
     id: 3,
-    title: "Special Chilli Chicken Birayani",
-    imgUrl: foodItemImage3,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 3.8,
-    rateUser: 150,
-    price: "430",
-    type: "nonveg",
-    bestseller: true,
+    title: "Apple iPhone 16 (White, 128 GB)",
+    imgUrl: ph3,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "69,999",
   },
   {
     id: 4,
-    title: "Chicken Dum Birayani",
-    imgUrl: foodItemImage4,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 2.9,
-    rateUser: 36,
-    price: "330",
-    type: "veg",
-    bestseller: false,
+    title: "Google Pixel 10 (Obsidian, 256 GB)",
+    imgUrl: ph4,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "79,890",
   },
   {
     id: 5,
-    title: "Veg Birayani",
-    imgUrl: foodItemImage5,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 3.8,
-    rateUser: 150,
-    price: "430",
-    type: "veg",
-    bestseller: false,
+    title: "Apple iPhone 16 Pro Max (White Titanium, 256 GB)",
+    imgUrl: ph5,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "1,30,900",
   },
   {
     id: 6,
-    title: "Royal Special Chicken Birayani",
+    title: "Apple iPhone 16 Pro Max (Desert Titanium, 256 GB)",
+    imgUrl: ph6,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "1,25,900",
+  },
+];
+
+export const productListNew = [
+  {
+    id: 1,
+    title: "Processor",
+    imgUrl: foodItemImage1,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+  {
+    id: 2,
+    title: "RAM / SSD",
+    imgUrl: foodItemImage2,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+  {
+    id: 3,
+    title: "Motherboard",
     imgUrl: foodItemImage6,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 4.9,
-    rateUser: 36,
-    price: "330",
-    type: "veg",
-    bestseller: true,
+  },
+  {
+    id: 4,
+    title: "Graphics Card",
+    imgUrl: foodItemImage3,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+  {
+    id: 5,
+    title: "Cabinate",
+    imgUrl: foodItemImage4,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
+  {
+    id: 6,
+    title: "UPS / Power",
+    imgUrl: foodItemImage5,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
   {
     id: 7,
-    title: "Fish Birayani",
-    imgUrl: foodItemImage1,
+    title: "Monitor",
+    imgUrl: foodItemImage8,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 4.2,
-    rateUser: 124,
-    price: "300",
-    type: "nonveg",
-    bestseller: true,
-  },
-  {
-    id: 8,
-    title: "Chicken Kebab Birayani",
-    imgUrl: foodItemImage2,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 2.6,
-    rateUser: 24,
-    price: "320",
-    type: "nonveg",
-    bestseller: true,
-  },
-  {
-    id: 9,
-    title: "Special Chilli Chicken Birayani",
-    imgUrl: foodItemImage3,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 3.8,
-    rateUser: 150,
-    price: "430",
-    type: "nonveg",
-    bestseller: false,
-  },
-  {
-    id: 10,
-    title: "Chicken Dum Birayani",
-    imgUrl: foodItemImage4,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 2.9,
-    rateUser: 36,
-    price: "330",
-    type: "nonveg",
-    bestseller: false,
-  },
-  {
-    id: 11,
-    title: "Veg Birayani",
-    imgUrl: foodItemImage5,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 3.8,
-    rateUser: 150,
-    price: "430",
-    type: "veg",
-    bestseller: false,
-  },
-  {
-    id: 12,
-    title: "Royal Special Chicken Birayani",
-    imgUrl: foodItemImage6,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-    rating: 4.9,
-    rateUser: 36,
-    price: "330",
-    type: "nonveg",
-    bestseller: false,
   },
 ];

@@ -2,14 +2,13 @@ import { useState, useRef, useEffect } from "react";
 import { View, FlatList, Dimensions, ImageBackground } from "react-native";
 
 const comboBanners = [
-  require("../assets/images/cat_advt_1.jpg"),
-  require("../assets/images/cat_advt_2.jpg"),
-  require("../assets/images/cat_advt_3.jpg"),
-  require("../assets/images/cat_advt_4.jpg"),
+  require("../assets/images/dg1.jpg"),
+  require("../assets/images/dg2.jpg"),
+  require("../assets/images/dg3.jpg"),
 ];
 const { width: screenWidth } = Dimensions.get("window");
 
-export default function SpclComboPack() {
+export default function NextCombo() {
   const sliderRef = useRef<FlatList<any>>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -45,8 +44,8 @@ export default function SpclComboPack() {
               resizeMode="cover"
               style={{
                 width: screenWidth,
-                height: 180,
-                justifyContent: "center",
+                height: 190,
+                backgroundPosition: "center",
               }}
             />
           )}

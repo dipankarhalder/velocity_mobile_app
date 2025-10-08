@@ -15,7 +15,9 @@ import { Phone } from "../../constant/icon";
 import Header from "../../components/Header";
 import FoodItemCategories from "../../components/FoodCategories";
 import Recommended from "../../components/Recommended";
+import RecommendedPhone from "../../components/RecommendedPhone";
 import SpclComboPack from "../../components/SpclComboPack";
+import NextCombo from "../../components/NextCombo";
 import OfferList from "../../components/OfferList";
 import FeatureProducts from "../../components/FeatureProducts";
 
@@ -135,16 +137,12 @@ export default function Home() {
           <FoodItemCategories />
           <Recommended />
           <SpclComboPack />
+          <RecommendedPhone />
           <FeatureProducts />
+          <NextCombo />
           <OfferList />
         </View>
-        <View className="flex-col w-full bg-gray-100 px-5 pt-[100px] pb-[120px]">
-          <Text className="text-[40px] text-gray-400 font-nunitosans-extrabold leading-tight">
-            Our Foods, Our
-          </Text>
-          <Text className="text-[90px] text-gray-400 font-nunitosans-extrabold leading-tight mt-[-16px]">
-            Identity
-          </Text>
+        <View className="flex-col w-full bg-gray-100 px-5 pt-[30px] pb-[50px]">
           <View className="flex-row w-full gap-2 items-center mt-[20px]">
             <Image source={footer_heart} className="h-[40px] w-[40px]" />
             <Text className="text-[26px] text-gray-400 font-nunitosans-bold leading-tight">
