@@ -12,7 +12,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Phone } from "../../constant/icon";
 import Header from "../../components/Header";
-import { mainBanner, productListCat } from "../../constant/static";
+import OfferList from "../../components/OfferList";
+import { main_back, productListCat } from "../../constant/static";
 
 export default function Categories() {
   const [searchInput, setSearchInput] = useState("");
@@ -32,7 +33,7 @@ export default function Categories() {
 
   const bgColorChange = scrollY.interpolate({
     inputRange: [0, 300],
-    outputRange: ["#000000", "#f8944f"],
+    outputRange: ["#000000", "#dfc7ff"],
     extrapolate: "clamp",
   });
 
@@ -97,7 +98,7 @@ export default function Categories() {
           }}
         >
           <ImageBackground
-            source={mainBanner}
+            source={main_back}
             resizeMode="cover"
             style={{ width: "100%", height: "100%" }}
           />
@@ -119,7 +120,7 @@ export default function Categories() {
               Popular Categories
             </Text>
           </View>
-          <View className="flex-row flex-wrap w-full gap-6">
+          <View className="flex-row flex-wrap w-full gap-6 mb-[30px]">
             {productListCat.map((item) => (
               <View
                 className="w-full flex-col bg-white rounded-[10px] relative overflow-hidden"
@@ -148,6 +149,7 @@ export default function Categories() {
               </View>
             ))}
           </View>
+          <OfferList />
         </View>
       </Animated.ScrollView>
     </View>
