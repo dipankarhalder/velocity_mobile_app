@@ -78,8 +78,6 @@ export default function Otp() {
     try {
       setLoading(true);
       setOtpError("");
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
       if (otp !== "1234") {
         setOtpError("Incorrect OTP. Please try again.");
         return;
