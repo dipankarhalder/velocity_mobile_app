@@ -33,6 +33,7 @@ type LoginFormInputs = {
 export default function Login() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [errorPhone, setErrorPhone] = useState<string | null>(null);
 
   const {
     control,
@@ -46,12 +47,16 @@ export default function Login() {
   const onSubmit = async (data: LoginFormInputs) => {
     try {
       setLoading(true);
-      console.log("Phone submitted:", data.phone);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      router.replace({
-        pathname: pathItem.otp as any,
-        params: { phone: data.phone },
-      });
+      if (data.phone === "9038716512") {
+        router.replace({
+          pathname: pathItem.otp as any,
+          params: { phone: data.phone },
+        });
+      } else {
+        setErrorPhone(
+          `The user is not found with this phone no - ${data.phone}`
+        );
+      }
     } catch (err) {
       console.error(err);
     } finally {
@@ -136,8 +141,14 @@ export default function Login() {
                 )}
               />
               {errors.phone && (
-                <Text className="text-red-500 text-sm mt-1 w-full">
+                <Text className="text-red-500 font-nunitosans-semibold text-sm mt-1 w-full">
                   {errors.phone.message}
+                </Text>
+              )}
+
+              {errorPhone && (
+                <Text className="text-red-700 font-nunitosans-semibold text-sm mt-1 w-full">
+                  {errorPhone}
                 </Text>
               )}
 
