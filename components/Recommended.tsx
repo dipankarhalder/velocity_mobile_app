@@ -1,8 +1,11 @@
 import React from "react";
-import { View, Text, FlatList, Image } from "react-native";
+import { useRouter } from "expo-router";
+import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 import { productList } from "../constant/static";
 
 export default function Recommended() {
+  const router = useRouter();
+
   return (
     <View className="w-full flex-col mb-[30px]">
       <View className="w-full mb-3">
@@ -19,8 +22,9 @@ export default function Recommended() {
         renderItem={({ item }) => {
           const { id, title, imgUrl, price, mainPrice } = item;
           return (
-            <View
+            <TouchableOpacity
               className="w-[150px] mr-4 flex-col items-center rounded-[10px] border border-gray-300 px-3 pt-3 pb-2"
+              onPress={() => router.push(`/details/${item.id}`)}
               key={id}
             >
               <View className="w-auto overflow-hidden rounded-[10px] relative">
@@ -41,7 +45,7 @@ export default function Recommended() {
                   ₹ {mainPrice} /-
                 </Text>
               </View>
-            </View>
+            </TouchableOpacity>
           );
         }}
       />

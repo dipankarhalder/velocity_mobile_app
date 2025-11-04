@@ -9,8 +9,8 @@ export default function Header() {
         <View className="flex-row gap-3">
           <User color={"#000000"} />
           <View className="flex-col mt-[-2px]">
-            <Text className="text-[18px] font-nunitosans-extrabold text-black">
-              Hey, Ankit
+            <Text className="text-[16px] font-nunitosans-extrabold text-black">
+              Hey, Himadri
             </Text>
           </View>
         </View>
