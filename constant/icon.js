@@ -141,11 +141,11 @@ export const Star = ({ color = "#FFB042", size = 12 }) => (
     />
   </Svg>
 );
-export const Back = () => (
-  <Svg width="100%" height="100%" viewBox="0 0 24 24" fill="none">
+export const Back = ({ color = "#ffffff", size = 24 }) => (
+  <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">
     <Path
       d="M20 12H4M4 12L10 18M4 12L10 6"
-      stroke="currentColor"
+      stroke={color}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
