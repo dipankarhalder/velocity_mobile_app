@@ -3,7 +3,7 @@ import { useRouter } from "expo-router";
 import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import { user_profile } from "../../constant/static";
 
-export default function Home() {
+export default function Profile() {
   const router = useRouter();
 
   return (

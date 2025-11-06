@@ -6,4 +6,5 @@ export const pathItem = {
   otp: "/otp",
   home: "/(apps)/home",
   profile: "/(extra)/profile",
+  search: "/(extra)/search",
 };

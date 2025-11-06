@@ -1,8 +1,11 @@
 import React from "react";
 import { useRouter } from "expo-router";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity, Dimensions } from "react-native";
 import { listOfProducts, ban_bg } from "../constant/static";
 import AddToCartButton from "../components/AddToCartButton";
+
+const screenWidth = Dimensions.get("window").width;
+const itemWidth = (screenWidth - 48) / 2;
 
 export default function MainFeatureList() {
   const router = useRouter();
@@ -17,22 +20,23 @@ export default function MainFeatureList() {
           List of Products
         </Text>
       </View>
-      <View className="w-full flex-row flex-wrap gap-4">
+      <View className="flex-row flex-wrap justify-between">
         {listOfProducts.map((foodItem) => (
           <View
-            className="w-[48%] flex-col items-center rounded-[10px] border border-gray-300 px-3 pt-3 pb-5"
+            style={{ width: itemWidth }}
+            className="rounded-[10px] border border-gray-300 px-3 pt-3 pb-5 mb-4"
             key={foodItem.id}
           >
             <TouchableOpacity
               className="flex-col items-center"
               onPress={() => router.push(`/details/${foodItem.id}`)}
             >
-              <View className="w-auto overflow-hidden rounded-[10px] relative">
+              <View className="overflow-hidden rounded-[10px]">
                 <Image source={foodItem.imgUrl} className="w-[80px] h-[80px]" />
               </View>
-              <View className="w-auto py-2 px-0 relative">
+              <View className="py-2">
                 <Text
-                  className="text-[13px] text-black text-center pr-2 font-nunitosans-semibold mb-3"
+                  className="text-[13px] text-black text-center font-nunitosans-semibold mb-3"
                   numberOfLines={2}
                   ellipsizeMode="tail"
                 >

@@ -13,24 +13,21 @@ export default function OfferList() {
       <FlatList
         horizontal
         data={offerList}
-        scrollEventThrottle={16}
         keyExtractor={(item) => item.id.toString()}
         showsHorizontalScrollIndicator={false}
-        renderItem={({ item }) => {
-          const { id, imgUrl } = item;
-          return (
-            <View
-              key={id}
-              className="w-[120px] h-[80px] mr-4 justify-center items-center border border-gray-200 rounded-lg overflow-hidden"
-            >
-              <Image
-                source={imgUrl}
-                resizeMode="contain"
-                className="w-full aspect-[3/2]"
-              />
-            </View>
-          );
-        }}
+        contentContainerStyle={{ paddingRight: 16 }}
+        renderItem={({ item }) => (
+          <View
+            key={item.id}
+            className="w-[120px] h-[80px] mr-4 justify-center items-center border border-gray-200 rounded-lg overflow-hidden bg-white"
+          >
+            <Image
+              source={item.imgUrl}
+              resizeMode="contain"
+              className="w-[90%] h-[90%]"
+            />
+          </View>
+        )}
       />
     </View>
   );
