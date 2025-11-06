@@ -61,7 +61,7 @@ import splashImage10 from "../assets/images/10.jpg";
 import splashImage11 from "../assets/images/11.jpg";
 import {
   Home,
-  User,
+  // User,
   Lists,
   Orders,
   Categories,
@@ -188,7 +188,32 @@ export const offerList = [
     imgUrl: cl10,
   },
 ];
-
+export const searchList = [
+  {
+    id: 1,
+    category: "Processor",
+    title: "AMD Ryzen 7 5800X Processor",
+    imgUrl: foodItemImage1,
+  },
+  {
+    id: 2,
+    category: "Memory",
+    title: "Crucial P3 Plus 1TB NVMe Gen4 Inter...",
+    imgUrl: foodItemImage2,
+  },
+  {
+    id: 3,
+    category: "Graphics Card",
+    title: "ASUS Dual RTX 5060 OC 8GB GDDR7...",
+    imgUrl: foodItemImage3,
+  },
+  {
+    id: 4,
+    category: "Cabinate",
+    title: "Dawg Y 990 ARGB E-ATX Mid Tower...",
+    imgUrl: foodItemImage4,
+  },
+];
 export const productList = [
   {
     id: 1,

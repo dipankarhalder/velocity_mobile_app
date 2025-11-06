@@ -1,31 +1,41 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 type AuthState = {
+  token: string | null;
   isAuthenticated: boolean;
-  setAuthenticated: (value: boolean) => void;
-  login: () => void;
-  logout: () => void;
+  setToken: (token: string | null) => Promise<void>;
+  login: (token: string) => Promise<void>;
+  logout: () => Promise<void>;
   hydrate: () => Promise<void>;
 };
 
 export const useAuthStore = create<AuthState>((set) => ({
+  token: null,
   isAuthenticated: false,
-  setAuthenticated: (value) => {
-    set({ isAuthenticated: value });
-    AsyncStorage.setItem("isAuthenticated", value ? "true" : "false");
-  },
-  login: () => {
-    set({ isAuthenticated: true });
-    AsyncStorage.setItem("isAuthenticated", "true");
+
+  setToken: async (token) => {
+    if (token) {
+      await AsyncStorage.setItem("authToken", token);
+      set({ token, isAuthenticated: true });
+    } else {
+      await AsyncStorage.removeItem("authToken");
+      set({ token: null, isAuthenticated: false });
+    }
   },
 
-  logout: () => {
-    set({ isAuthenticated: false });
-    AsyncStorage.setItem("isAuthenticated", "false");
+  login: async (token) => {
+    await AsyncStorage.setItem("authToken", token);
+    set({ token, isAuthenticated: true });
   },
+
+  logout: async () => {
+    await AsyncStorage.removeItem("authToken");
+    set({ token: null, isAuthenticated: false });
+  },
+
   hydrate: async () => {
-    const auth = await AsyncStorage.getItem("isAuthenticated");
-    set({ isAuthenticated: auth === "true" });
+    const storedToken = await AsyncStorage.getItem("authToken");
+    set({ token: storedToken, isAuthenticated: !!storedToken });
   },
 }));
