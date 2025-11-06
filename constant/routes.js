@@ -5,4 +5,5 @@ export const pathItem = {
   forgot: "/forgot",
   otp: "/otp",
   home: "/(apps)/home",
+  profile: "/(extra)/profile",
 };

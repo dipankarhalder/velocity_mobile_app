@@ -1,8 +1,11 @@
 import React from "react";
-import { View, Text, FlatList, Image } from "react-native";
+import { useRouter } from "expo-router";
+import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import { phoneList } from "../constant/static";
 
 export default function RecommendedPhone() {
+  const router = useRouter();
+
   return (
     <View className="w-full flex-col mb-[30px]">
       <View className="w-full mb-3">
@@ -19,8 +22,9 @@ export default function RecommendedPhone() {
         renderItem={({ item }) => {
           const { id, title, imgUrl, price } = item;
           return (
-            <View
+            <TouchableOpacity
               className="w-[150px] mr-4 flex-col items-center rounded-[10px] border border-gray-300 px-3 pt-5 pb-2"
+              onPress={() => router.push(`/phone/${id}`)}
               key={id}
             >
               <View className="w-auto overflow-hidden relative mb-2">
@@ -38,7 +42,7 @@ export default function RecommendedPhone() {
                   ₹ {price} /-
                 </Text>
               </View>
-            </View>
+            </TouchableOpacity>
           );
         }}
       />
