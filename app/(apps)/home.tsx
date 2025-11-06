@@ -1,17 +1,19 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import {
   View,
   Text,
   Platform,
-  TextInput,
   Animated,
   Image,
   ImageBackground,
+  TouchableOpacity,
 } from "react-native";
+import { useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { mainBanner, footer_heart } from "../../constant/static";
-import { Phone } from "../../constant/icon";
+import { SearchIc } from "../../constant/icon";
+import { pathItem } from "../../constant/routes";
 import Header from "../../components/Header";
 import FoodItemCategories from "../../components/FoodCategories";
 import Recommended from "../../components/Recommended";
@@ -23,7 +25,7 @@ import FeatureProducts from "../../components/FeatureProducts";
 import MainFeatureList from "../../components/MainFeatureList";
 
 export default function Home() {
-  const [searchInput, setSearchInput] = useState("");
+  const router = useRouter();
   const scrollY = useRef(new Animated.Value(0)).current;
 
   const headerHeight = scrollY.interpolate({
@@ -64,20 +66,17 @@ export default function Home() {
         <SafeAreaView className="w-full flex-col rounded-[20px] z-[3]">
           <Header />
           <View className="flex px-5">
-            <View
+            <TouchableOpacity
               className={`flex-row items-center border border-white bg-white rounded-[10px] gap-4 px-4 mb-0 ${
                 Platform.OS === "ios" ? "h-[44px]" : "h-[48px]"
               }`}
+              onPress={() => router.push(pathItem.search as any)}
             >
-              <Phone />
-              <TextInput
-                value={searchInput}
-                placeholder="Search here..."
-                onChangeText={(text) => setSearchInput(text)}
-                className="text-black flex-1 font-nunitosans-semibold text-[16px]"
-                placeholderTextColor="#999"
-              />
-            </View>
+              <SearchIc />
+              <Text className="text-gray-400 flex-1 font-nunitosans-semibold text-[15px]">
+                Search here...
+              </Text>
+            </TouchableOpacity>
           </View>
         </SafeAreaView>
         <Animated.View
@@ -144,7 +143,7 @@ export default function Home() {
           <MainFeatureList />
           <OfferList />
         </View>
-        <View className="flex-col w-full bg-gray-100 px-5 pt-[30px] pb-[50px]">
+        <View className="flex-col w-full bg-gray-100 px-5 pt-[30px] pb-[120px]">
           <View className="flex-row w-full gap-2 items-center mt-[20px]">
             <Image source={footer_heart} className="h-[40px] w-[40px]" />
             <Text className="text-[26px] text-gray-400 font-nunitosans-bold leading-tight">

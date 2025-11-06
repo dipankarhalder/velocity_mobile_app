@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import "react-native-reanimated";
 import { useFonts } from "expo-font";
-import { SplashScreen, Stack } from "expo-router";
-import { View, Text } from "react-native";
+import { SplashScreen, Stack, useRouter } from "expo-router";
+import { View, Text, ActivityIndicator } from "react-native";
 import { useAuthStore } from "../store/auth";
+import { pathItem } from "../constant/routes";
 
 import "./global.css";
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const router = useRouter();
+  const { isAuthenticated, hydrate } = useAuthStore();
+  const [authHydrated, setAuthHydrated] = useState(false);
+
   const [fontsLoaded, fontError] = useFonts({
     "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
     "NunitoSans-Medium": require("../assets/fonts/NunitoSans-Medium.ttf"),
@@ -17,15 +22,11 @@ export default function RootLayout() {
     "NunitoSans-ExtraBold": require("../assets/fonts/NunitoSans-ExtraBold.ttf"),
   });
 
-  const hydrate = useAuthStore((state) => state.hydrate);
-  const [authHydrated, setAuthHydrated] = useState(false);
-
   useEffect(() => {
     const prepare = async () => {
       await hydrate();
       setAuthHydrated(true);
     };
-
     prepare();
   }, [hydrate]);
 
@@ -36,10 +37,24 @@ export default function RootLayout() {
     }
   }, [fontsLoaded, fontError, authHydrated]);
 
+  useEffect(() => {
+    if (authHydrated) {
+      if (isAuthenticated) {
+        router.replace(pathItem.home as any);
+      } else {
+        router.replace(pathItem.login as any);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuthenticated, authHydrated]);
+
   if (!fontsLoaded || !authHydrated) {
     return (
-      <View className="flex-1 justify-center items-center">
-        <Text>Please wait, loading...</Text>
+      <View className="flex-1 justify-center items-center bg-white">
+        <ActivityIndicator size="large" color="#FF0000" />
+        <Text className="mt-2 text-gray-600 font-nunitosans-semibold">
+          Loading, please wait...
+        </Text>
       </View>
     );
   }

@@ -78,11 +78,15 @@ export default function Otp() {
     try {
       setLoading(true);
       setOtpError("");
+
       if (otp !== "1234") {
         setOtpError("Incorrect OTP. Please try again.");
         return;
       }
-      login();
+
+      const fakeToken = "demotoken1234alwaysnew";
+
+      await login(fakeToken);
       router.replace(pathItem.home as any);
     } catch (error) {
       console.error("OTP Error", error);
