@@ -7,6 +7,7 @@ import {
   Platform,
   TouchableOpacity,
 } from "react-native";
+import { useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { SearchIc } from "../../constant/icon";
@@ -15,6 +16,7 @@ import OfferList from "../../components/OfferList";
 import { productListCat } from "../../constant/static";
 
 export default function Categories() {
+  const router = useRouter();
   const scrollY = useRef(new Animated.Value(0)).current;
 
   const headerHeight = scrollY.interpolate({
@@ -74,8 +76,9 @@ export default function Categories() {
           </View>
           <View className="flex-row flex-wrap w-full gap-6 mb-[30px]">
             {productListCat.map((item) => (
-              <View
+              <TouchableOpacity
                 className="w-full flex-col bg-white rounded-[10px] relative overflow-hidden"
+                onPress={() => router.push(`/category/${item.category}`)}
                 key={item.id}
               >
                 <Image
@@ -98,7 +101,7 @@ export default function Categories() {
                     zIndex: 1,
                   }}
                 />
-              </View>
+              </TouchableOpacity>
             ))}
           </View>
           <OfferList />

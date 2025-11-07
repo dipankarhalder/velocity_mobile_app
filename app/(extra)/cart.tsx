@@ -30,7 +30,7 @@ export default function CartPage() {
             {items.map((item) => (
               <View
                 key={item.id}
-                className="flex-row items-center justify-between border-b border-gray-100 py-3 gap-3"
+                className="flex-row items-center justify-between border-b border-gray-100 py-4 gap-3"
               >
                 <Image
                   source={item.imgUrl}
@@ -67,17 +67,27 @@ export default function CartPage() {
                 </View>
               </View>
             ))}
-            <Text className="text-[14px] font-nunitosans-semibold mt-4 text-right">
-              Total Price:{"  "}
-              <Text className="text-[#ff0000] text-[15px] font-nunitosans-bold">
-                ₹ {total.toLocaleString("en-IN")}
+            <View className="flex-col items-end mt-8 pb-3">
+              <Text className="text-[14px] font-nunitosans-semibold text-right">
+                Total Price:{"  "}
+                <Text className="text-[#ff0000] text-[15px] font-nunitosans-bold">
+                  ₹ {total.toLocaleString("en-IN")}
+                </Text>
               </Text>
-            </Text>
+              <TouchableOpacity
+                onPress={clearCart}
+                className="bg-[#ff0000] py-3 px-6 rounded-md mt-4"
+              >
+                <Text className="text-center text-white font-nunitosans-bold">
+                  Process to Pay
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-          <View className="px-[100px]">
+          <View className="px-[120px]">
             <TouchableOpacity
               onPress={clearCart}
-              className="mt-[50px] bg-gray-200 border border-gray-300 py-3 px-5 rounded-md"
+              className="mt-[50px] bg-gray-200 border border-gray-300 py-2 px-4 rounded-md"
             >
               <Text className="text-center text-black font-nunitosans-bold">
                 Clear Cart
