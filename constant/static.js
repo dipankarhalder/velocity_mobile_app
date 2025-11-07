@@ -217,7 +217,7 @@ export const searchList = [
 export const productList = [
   {
     id: 1,
-    category: "Processor",
+    category: "processor",
     title: "AMD Ryzen 7 5800X Processor",
     imgUrl: foodItemImage1,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -227,7 +227,7 @@ export const productList = [
   },
   {
     id: 2,
-    category: "Memory",
+    category: "memory",
     title: "Crucial P3 Plus 1TB NVMe Gen4 Internal S...",
     imgUrl: foodItemImage2,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -237,7 +237,7 @@ export const productList = [
   },
   {
     id: 3,
-    category: "Graphics Card",
+    category: "graphics",
     title: "ASUS Dual RTX 5060 OC 8GB GDDR7 Graphics...",
     imgUrl: foodItemImage3,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -247,7 +247,7 @@ export const productList = [
   },
   {
     id: 4,
-    category: "Cabinate",
+    category: "cabinate",
     title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
     imgUrl: foodItemImage4,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -257,7 +257,7 @@ export const productList = [
   },
   {
     id: 5,
-    category: "UPS",
+    category: "ups",
     title: "CyberPower UT2200E 2200VA UPS",
     imgUrl: foodItemImage5,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -267,7 +267,7 @@ export const productList = [
   },
   {
     id: 6,
-    category: "Motherboard",
+    category: "motherboard",
     title: "ZOTAC RTX 5060 Solo 8GB GDDR7 Graphics C...",
     imgUrl: foodItemImage6,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -277,7 +277,7 @@ export const productList = [
   },
   {
     id: 7,
-    category: "Graphics Card",
+    category: "graphics",
     title: "MSI RTX 5060 Inspire 2X OC 8GB GDDR7 Gra...",
     imgUrl: foodItemImage7,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -287,7 +287,7 @@ export const productList = [
   },
   {
     id: 8,
-    category: "Monitor",
+    category: "monitor",
     title: "ASUS Dual RTX IPS Monitor for Graphics...",
     imgUrl: foodItemImage8,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -297,13 +297,43 @@ export const productList = [
   },
   {
     id: 9,
-    category: "Motherboard",
+    category: "motherboard",
     title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
     imgUrl: foodItemImage9,
     desc: "Lorem Ipsum has been the industrys standard..",
     price: "16,330",
     mainPrice: "19,240",
     rating: 4.0,
+  },
+  {
+    id: 10,
+    category: "phone",
+    title: "Apple iPhone 16 Pro Max (Black Titanium, 256 GB)",
+    imgUrl: ph1,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "1,34,900",
+    mainPrice: "1,34,900",
+    rating: "4.2",
+  },
+  {
+    id: 11,
+    category: "phone",
+    title: "Google Pixel 9A (Iris, 256 GB)",
+    imgUrl: ph2,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "44,820",
+    mainPrice: "44,820",
+    rating: "4.2",
+  },
+  {
+    id: 12,
+    category: "phone",
+    title: "Apple iPhone 16 (White, 128 GB)",
+    imgUrl: ph3,
+    desc: "Lorem Ipsum has been the industrys standard..",
+    price: "69,999",
+    mainPrice: "69,999",
+    rating: "4.2",
   },
 ];
 
@@ -369,7 +399,6 @@ export const phoneList = [
     rating: "4.2",
   },
 ];
-
 export const productListNew = [
   {
     id: 1,
@@ -414,23 +443,32 @@ export const productListNew = [
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
 ];
-
 export const productListCat = [
+  {
+    id: 3,
+    title: "Phone",
+    category: "phone",
+    imgUrl: bgp2,
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+  },
   {
     id: 1,
     title: "Processor",
+    category: "processor",
     imgUrl: bgp1,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
   {
     id: 5,
     title: "Motherboard",
+    category: "motherboard",
     imgUrl: bgp4,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
   {
     id: 2,
     title: "RAM / SSD",
+    category: "memory",
     imgUrl: bgp3,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
@@ -438,6 +476,7 @@ export const productListCat = [
   {
     id: 4,
     title: "Graphics Card",
+    category: "graphics",
     imgUrl: bgp5,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
@@ -445,27 +484,22 @@ export const productListCat = [
   {
     id: 6,
     title: "Cabinate",
+    category: "cabinate",
     imgUrl: bgp6,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
   {
     id: 7,
     title: "UPS / Power",
+    category: "ups",
     imgUrl: bgp7,
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
   },
-  {
-    id: 3,
-    title: "Phone",
-    imgUrl: bgp2,
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-  },
 ];
-
 export const listOfProducts = [
   {
     id: 1,
-    category: "Processor",
+    category: "processor",
     title: "AMD Ryzen 7 5800X Processor",
     imgUrl: foodItemImage1,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -475,7 +509,7 @@ export const listOfProducts = [
   },
   {
     id: 2,
-    category: "Memory",
+    category: "memory",
     title: "Crucial P3 Plus 1TB NVMe Gen4 Internal S...",
     imgUrl: foodItemImage2,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -485,7 +519,7 @@ export const listOfProducts = [
   },
   {
     id: 3,
-    category: "Graphics Card",
+    category: "graphics",
     title: "ASUS Dual RTX 5060 OC 8GB GDDR7 Graphics...",
     imgUrl: foodItemImage3,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -495,7 +529,7 @@ export const listOfProducts = [
   },
   {
     id: 4,
-    category: "Cabinate",
+    category: "cabinate",
     title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
     imgUrl: foodItemImage4,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -505,7 +539,7 @@ export const listOfProducts = [
   },
   {
     id: 5,
-    category: "UPS",
+    category: "ups",
     title: "CyberPower UT2200E 2200VA UPS",
     imgUrl: foodItemImage5,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -515,7 +549,7 @@ export const listOfProducts = [
   },
   {
     id: 6,
-    category: "Motherboard",
+    category: "motherboard",
     title: "ZOTAC RTX 5060 Solo 8GB GDDR7 Graphics C...",
     imgUrl: foodItemImage6,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -525,7 +559,7 @@ export const listOfProducts = [
   },
   {
     id: 7,
-    category: "Graphics Card",
+    category: "graphics",
     title: "MSI RTX 5060 Inspire 2X OC 8GB GDDR7 Gra...",
     imgUrl: foodItemImage7,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -535,7 +569,7 @@ export const listOfProducts = [
   },
   {
     id: 8,
-    category: "Monitor",
+    category: "monitor",
     title: "ASUS Dual RTX IPS Monitor for Graphics...",
     imgUrl: foodItemImage8,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -545,7 +579,7 @@ export const listOfProducts = [
   },
   {
     id: 9,
-    category: "Motherboard",
+    category: "motherboard",
     title: "Dawg Y 990 ARGB E-ATX Mid Tower Case wit...",
     imgUrl: foodItemImage9,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -555,7 +589,7 @@ export const listOfProducts = [
   },
   {
     id: 10,
-    category: "Motherboard",
+    category: "motherboard",
     title: "ZOTAC RTX 5060 Solo 8GB GDDR7 Graphics C...",
     imgUrl: foodItemImage6,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -565,7 +599,7 @@ export const listOfProducts = [
   },
   {
     id: 11,
-    category: "Graphics Card",
+    category: "graphics",
     title: "MSI RTX 5060 Inspire 2X OC 8GB GDDR7 Gra...",
     imgUrl: foodItemImage7,
     desc: "Lorem Ipsum has been the industrys standard..",
@@ -575,7 +609,7 @@ export const listOfProducts = [
   },
   {
     id: 12,
-    category: "Monitor",
+    category: "monitor",
     title: "ASUS Dual RTX IPS Monitor for Graphics...",
     imgUrl: foodItemImage8,
     desc: "Lorem Ipsum has been the industrys standard..",

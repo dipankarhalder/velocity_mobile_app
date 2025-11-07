@@ -10,9 +10,7 @@ export default function DetailsPage() {
   const numericId = Array.isArray(id)
     ? parseInt(id[0], 10)
     : parseInt(id || "", 10);
-
   const filteredData = productList.find((item) => item.id === numericId);
-  console.log(filteredData);
 
   const handleCountChange = (count: number) => {
     console.log("Cart count:", count);
