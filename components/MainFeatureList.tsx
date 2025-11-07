@@ -9,9 +9,6 @@ const itemWidth = (screenWidth - 48) / 2;
 
 export default function MainFeatureList() {
   const router = useRouter();
-  const handleCountChange = (count: number) => {
-    console.log("Cart count:", count);
-  };
 
   return (
     <View className="w-full flex-col mb-[40px]">
@@ -51,7 +48,7 @@ export default function MainFeatureList() {
               </View>
             </TouchableOpacity>
             <View className="w-full flex-row justify-center relative mt-1">
-              <AddToCartButton onChange={handleCountChange} />
+              <AddToCartButton product={foodItem} />
             </View>
           </View>
         ))}

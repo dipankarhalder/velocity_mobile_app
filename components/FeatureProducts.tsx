@@ -1,6 +1,9 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Dimensions } from "react-native";
 import { productListNew } from "../constant/static";
+
+const screenWidth = Dimensions.get("window").width;
+const itemWidth = (screenWidth - 56) / 3;
 
 export default function FeatureProducts() {
   return (
@@ -13,7 +16,8 @@ export default function FeatureProducts() {
       <View className="flex-row flex-wrap w-full gap-3">
         {productListNew.map((item) => (
           <View
-            className="w-[31.3%] flex-col bg-white border border-gray-300 px-3 pt-4 pb-4 rounded-[10px]"
+            style={{ width: itemWidth }}
+            className="border border-gray-300 px-3 pt-4 pb-4 rounded-[10px]"
             key={item.id}
           >
             <View className="w-full relative flex-col items-center">
