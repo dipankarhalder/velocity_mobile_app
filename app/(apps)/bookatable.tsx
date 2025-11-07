@@ -7,13 +7,14 @@ import {
   FlatList,
   ImageBackground,
   Platform,
-  TextInput,
   Dimensions,
+  TouchableOpacity,
 } from "react-native";
+import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Phone } from "../../constant/icon";
+import { SearchIc } from "../../constant/icon";
 import Header from "../../components/Header";
-import { main_backg, listOfProducts } from "../../constant/static";
+import { listOfProducts } from "../../constant/static";
 import AddToCartButton from "../../components/AddToCartButton";
 
 const comboBanners = [
@@ -23,38 +24,22 @@ const comboBanners = [
   require("../../assets/images/cat_advt_4.jpg"),
 ];
 const { width: screenWidth } = Dimensions.get("window");
+const itemWidth = (screenWidth - 48) / 2;
 
 export default function BookaTable() {
-  const [searchInput, setSearchInput] = useState("");
+  const router = useRouter();
   const scrollY = useRef(new Animated.Value(0)).current;
   const sliderRef = useRef<FlatList<any>>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleCountChange = (count: number) => {
-    console.log("Cart count:", count);
-  };
-
   const headerHeight = scrollY.interpolate({
     inputRange: [0, 200],
-    outputRange: [356, 172],
-    extrapolate: "clamp",
-  });
-
-  const bgImageOpacity = scrollY.interpolate({
-    inputRange: [0, 300],
-    outputRange: [0.9, 0],
-    extrapolate: "clamp",
-  });
-
-  const bgColorChange = scrollY.interpolate({
-    inputRange: [0, 300],
-    outputRange: ["#000000", "#6b98e3"],
+    outputRange: [170, 170],
     extrapolate: "clamp",
   });
 
   useEffect(() => {
     let isMounted = true;
-
     const interval = setInterval(() => {
       if (!isMounted) return;
       const nextIndex = (currentIndex + 1) % comboBanners.length;
@@ -74,7 +59,7 @@ export default function BookaTable() {
         style={{
           height: headerHeight,
           width: "100%",
-          backgroundColor: "#000000",
+          backgroundColor: "#6b98e3",
           borderBottomLeftRadius: 16,
           borderBottomRightRadius: 16,
           zIndex: 10,
@@ -88,56 +73,22 @@ export default function BookaTable() {
         <SafeAreaView className="w-full flex-col rounded-[20px] z-[3]">
           <Header />
           <View className="flex px-5">
-            <View
+            <TouchableOpacity
               className={`flex-row items-center border border-white bg-white rounded-[10px] gap-4 px-4 mb-0 ${
                 Platform.OS === "ios" ? "h-[44px]" : "h-[48px]"
               }`}
             >
-              <Phone />
-              <TextInput
-                value={searchInput}
-                placeholder="Search here..."
-                onChangeText={(text) => setSearchInput(text)}
-                className="text-black flex-1 font-nunitosans-semibold text-[16px]"
-                placeholderTextColor="#999"
-              />
-            </View>
+              <SearchIc />
+              <Text className="text-gray-500 flex-1 font-nunitosans-semibold text-[15px]">
+                Search here...
+              </Text>
+            </TouchableOpacity>
           </View>
         </SafeAreaView>
-        <Animated.View
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            width: "100%",
-            height: 356,
-            backgroundColor: bgColorChange,
-            zIndex: 0,
-          }}
-        />
-        <Animated.View
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            width: "100%",
-            height: 356,
-            zIndex: 1,
-            opacity: bgImageOpacity,
-          }}
-        >
-          <ImageBackground
-            source={main_backg}
-            resizeMode="cover"
-            style={{ width: "100%", height: "100%" }}
-          />
-        </Animated.View>
       </Animated.View>
       <Animated.ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingTop: 390, paddingBottom: 0 }}
+        contentContainerStyle={{ paddingTop: 190, paddingBottom: 0 }}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { y: scrollY } } }],
           { useNativeDriver: false }
@@ -152,35 +103,41 @@ export default function BookaTable() {
                 List of Products
               </Text>
             </View>
-            <View className="w-full flex-row flex-wrap gap-4">
+            <View className="flex-row flex-wrap justify-between">
               {listOfProducts.map((foodItem) => (
                 <View
-                  className="w-[48%] flex-col items-center rounded-[10px] border border-gray-300 px-3 pt-3 pb-5"
+                  style={{ width: itemWidth }}
+                  className="rounded-[10px] border border-gray-300 px-3 pt-3 pb-5 mb-4"
                   key={foodItem.id}
                 >
-                  <View className="w-auto overflow-hidden rounded-[10px] relative">
-                    <Image
-                      source={foodItem.imgUrl}
-                      className="w-[80px] h-[80px]"
-                    />
-                  </View>
-                  <View className="w-auto py-2 px-0 relative">
-                    <Text
-                      className="text-[13px] text-black text-center pr-2 font-nunitosans-semibold mb-3"
-                      numberOfLines={2}
-                      ellipsizeMode="tail"
-                    >
-                      {foodItem.title}
-                    </Text>
-                    <Text className="text-[15px] text-[#ff0000] text-center font-nunitosans-bold">
-                      ₹ {foodItem.price} /-
-                    </Text>
-                    <Text className="text-[13px] text-gray-400 text-center font-nunitosans-bold line-through">
-                      ₹ {foodItem.mainPrice} /-
-                    </Text>
-                  </View>
+                  <TouchableOpacity
+                    className="flex-col items-center"
+                    onPress={() => router.push(`/details/${foodItem.id}`)}
+                  >
+                    <View className="overflow-hidden rounded-[10px]">
+                      <Image
+                        source={foodItem.imgUrl}
+                        className="w-[80px] h-[80px]"
+                      />
+                    </View>
+                    <View className="py-2">
+                      <Text
+                        className="text-[13px] text-black text-center font-nunitosans-semibold mb-3"
+                        numberOfLines={2}
+                        ellipsizeMode="tail"
+                      >
+                        {foodItem.title}
+                      </Text>
+                      <Text className="text-[15px] text-[#ff0000] text-center font-nunitosans-bold">
+                        ₹ {foodItem.price} /-
+                      </Text>
+                      <Text className="text-[13px] text-gray-400 text-center font-nunitosans-bold line-through">
+                        ₹ {foodItem.mainPrice} /-
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
                   <View className="w-full flex-row justify-center relative mt-1">
-                    <AddToCartButton onChange={handleCountChange} />
+                    <AddToCartButton product={foodItem} />
                   </View>
                 </View>
               ))}
@@ -217,32 +174,38 @@ export default function BookaTable() {
 
               {listOfProducts.map((foodItem) => (
                 <View
-                  className="w-[48%] flex-col items-center rounded-[10px] border border-gray-300 px-3 pt-3 pb-5"
+                  style={{ width: itemWidth }}
+                  className="rounded-[10px] border border-gray-300 px-3 pt-3 pb-5 mb-4"
                   key={foodItem.id}
                 >
-                  <View className="w-auto overflow-hidden rounded-[10px] relative">
-                    <Image
-                      source={foodItem.imgUrl}
-                      className="w-[80px] h-[80px]"
-                    />
-                  </View>
-                  <View className="w-auto py-2 px-0 relative">
-                    <Text
-                      className="text-[13px] text-black text-center pr-2 font-nunitosans-semibold mb-3"
-                      numberOfLines={2}
-                      ellipsizeMode="tail"
-                    >
-                      {foodItem.title}
-                    </Text>
-                    <Text className="text-[15px] text-[#ff0000] text-center font-nunitosans-bold">
-                      ₹ {foodItem.price} /-
-                    </Text>
-                    <Text className="text-[13px] text-gray-400 text-center font-nunitosans-bold line-through">
-                      ₹ {foodItem.mainPrice} /-
-                    </Text>
-                  </View>
+                  <TouchableOpacity
+                    className="flex-col items-center"
+                    onPress={() => router.push(`/details/${foodItem.id}`)}
+                  >
+                    <View className="overflow-hidden rounded-[10px]">
+                      <Image
+                        source={foodItem.imgUrl}
+                        className="w-[80px] h-[80px]"
+                      />
+                    </View>
+                    <View className="py-2">
+                      <Text
+                        className="text-[13px] text-black text-center font-nunitosans-semibold mb-3"
+                        numberOfLines={2}
+                        ellipsizeMode="tail"
+                      >
+                        {foodItem.title}
+                      </Text>
+                      <Text className="text-[15px] text-[#ff0000] text-center font-nunitosans-bold">
+                        ₹ {foodItem.price} /-
+                      </Text>
+                      <Text className="text-[13px] text-gray-400 text-center font-nunitosans-bold line-through">
+                        ₹ {foodItem.mainPrice} /-
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
                   <View className="w-full flex-row justify-center relative mt-1">
-                    <AddToCartButton onChange={handleCountChange} />
+                    <AddToCartButton product={foodItem} />
                   </View>
                 </View>
               ))}

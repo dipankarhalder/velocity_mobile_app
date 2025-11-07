@@ -73,7 +73,7 @@ export default function Home() {
               onPress={() => router.push(pathItem.search as any)}
             >
               <SearchIc />
-              <Text className="text-gray-400 flex-1 font-nunitosans-semibold text-[15px]">
+              <Text className="text-gray-500 flex-1 font-nunitosans-semibold text-[15px]">
                 Search here...
               </Text>
             </TouchableOpacity>

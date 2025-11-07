@@ -11,8 +11,8 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const router = useRouter();
-  const { isAuthenticated, hydrate } = useAuthStore();
   const [authHydrated, setAuthHydrated] = useState(false);
+  const { isAuthenticated, hydrate } = useAuthStore();
 
   const [fontsLoaded, fontError] = useFonts({
     "NunitoSans-Regular": require("../assets/fonts/NunitoSans-Regular.ttf"),
