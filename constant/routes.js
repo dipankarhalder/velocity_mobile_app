@@ -7,4 +7,5 @@ export const pathItem = {
   home: "/(apps)/home",
   profile: "/(extra)/profile",
   search: "/(extra)/search",
+  cart: "/(extra)/cart",
 };

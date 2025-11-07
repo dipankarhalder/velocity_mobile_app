@@ -1,44 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Text, Pressable } from "react-native";
+import { useCartStore } from "../store/cart";
 
 interface AddToCartButtonProps {
-  initialCount?: number;
-  onChange?: (count: number) => void;
+  product: {
+    id: number;
+    title: string;
+    price: string;
+    mainPrice?: string;
+    imgUrl: any;
+  };
 }
 
-export default function AddToCartButton({
-  initialCount = 1,
-  onChange,
-}: AddToCartButtonProps) {
-  const [count, setCount] = useState<number>(0);
+export default function AddToCartButton({ product }: AddToCartButtonProps) {
+  const { items, addToCart, increaseQuantity, decreaseQuantity } =
+    useCartStore();
 
-  const handleAddToCart = () => {
-    setCount(initialCount);
-    onChange?.(initialCount);
-  };
-
-  const handleIncrement = () => {
-    const newCount = count + 1;
-    setCount(newCount);
-    onChange?.(newCount);
-  };
-
-  const handleDecrement = () => {
-    const newCount = count - 1;
-    setCount(newCount);
-    onChange?.(newCount);
-
-    if (newCount <= 0) {
-      setCount(0);
-    }
-  };
+  const cartItem = items.find((i) => i.id === product.id);
+  const count = cartItem ? cartItem.quantity : 0;
 
   return (
     <View className="w-auto">
       {count === 0 ? (
         <Pressable
           className="bg-red-100 px-4 rounded-md border border-[#ff0000]"
-          onPress={handleAddToCart}
+          onPress={() => addToCart(product)}
         >
           <Text className="text-[#ff0000] leading-[30px] h-[30px] text-center text-[12px] font-nunitosans-bold">
             Add to Cart
@@ -46,7 +32,7 @@ export default function AddToCartButton({
         </Pressable>
       ) : (
         <View className="flex-row items-center justify-between space-x-4 bg-[#ff0000] rounded-md">
-          <Pressable onPress={handleDecrement}>
+          <Pressable onPress={() => decreaseQuantity(product.id)}>
             <Text className="text-xl h-[32px] w-[30px] text-white font-nunitosans-bold text-center leading-[30px]">
               -
             </Text>
@@ -54,7 +40,7 @@ export default function AddToCartButton({
           <Text className="text-base font-nunitosans-bold text-white px-2">
             {count}
           </Text>
-          <Pressable onPress={handleIncrement}>
+          <Pressable onPress={() => increaseQuantity(product.id)}>
             <Text className="text-xl h-[32px] w-[30px] text-white font-nunitosans-bold text-center leading-[30px]">
               +
             </Text>
